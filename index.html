@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenLeaf Café | Organic Coffee & Healthy Food</title>
+<meta name="description" content="GreenLeaf Café — a premium eco-friendly café in Indiranagar, Bengaluru serving locally roasted coffee, healthy food and desserts.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231e3b2c'/%3E%3Cpath d='M30 42h34v14c0 12-8 20-17 20s-17-8-17-20V42z' fill='none' stroke='%23f6f1e4' stroke-width='4'/%3E%3Cpath d='M64 46h6a8 8 0 0 1 0 16h-6' fill='none' stroke='%23f6f1e4' stroke-width='4'/%3E%3Cpath d='M38 36c-2-4 2-6 1-10M48 36c-2-4 2-6 1-10' stroke='%23c9a24b' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= LOADING SCREEN ================= -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <svg class="loader-leaf" viewBox="0 0 100 100" width="70" height="70">
+      <path d="M50 10 C 20 25, 15 60, 50 90 C 85 60, 80 25, 50 10 Z" fill="none" stroke="currentColor" stroke-width="3"/>
+      <path d="M50 15 L50 85" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+    </svg>
+    <p>GreenLeaf Café</p>
+  </div>
+</div>
+
+<!-- ================= SCROLL PROGRESS BAR ================= -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ================= NAVIGATION ================= -->
+<header class="site-header" id="siteHeader">
+  <nav class="navbar">
+    <a href="#home" class="brand">
+      <span class="brand-mark">🌿</span>
+      <span class="brand-text">GreenLeaf <em>Café</em></span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#menu" class="nav-link">Menu</a></li>
+      <li><a href="#why-us" class="nav-link">Why Us</a></li>
+      <li><a href="#gallery" class="nav-link">Gallery</a></li>
+      <li><a href="#offers" class="nav-link">Offers</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="darkToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="5"/><g stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.2" y1="19.8" x2="5.6" y2="18.4"/><line x1="18.4" y1="5.6" x2="19.8" y2="4.2"/></g></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <a href="#menu" class="btn btn-small btn-outline">Order Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="leaf-veins" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <p class="eyebrow reveal">🌱 Roasted Locally · Served Freshly</p>
+    <h1 class="hero-title">
+      <span class="line" data-text="Fresh Coffee.">Fresh Coffee.</span>
+      <span class="line accent" data-text="Fresh Ideas.">Fresh Ideas.</span>
+    </h1>
+    <p class="hero-desc reveal">
+      A warm corner of green — where honest coffee, slow mornings and
+      sustainable choices come together in every cup.
+    </p>
+    <div class="hero-actions reveal">
+      <a href="#menu" class="btn btn-primary ripple">View Menu</a>
+      <a href="#contact" class="btn btn-ghost ripple">Order Now</a>
+    </div>
+
+    <div class="hero-stats reveal">
+      <div class="stat">
+        <span class="counter" data-target="12">0</span><span class="stat-suffix">+</span>
+        <p>Years Brewing</p>
+      </div>
+      <div class="stat">
+        <span class="counter" data-target="48">0</span><span class="stat-suffix">k+</span>
+        <p>Happy Guests</p>
+      </div>
+      <div class="stat">
+        <span class="counter" data-target="100">0</span><span class="stat-suffix">%</span>
+        <p>Organic Beans</p>
+      </div>
+      <div class="stat">
+        <span class="counter" data-target="20">0</span><span class="stat-suffix">+</span>
+        <p>Signature Drinks</p>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-label="Scroll down">
+    <span></span>
+  </a>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-image reveal">
+      <div class="about-image-frame">
+        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=900&q=80" alt="Barista preparing coffee at GreenLeaf Café">
+      </div>
+      <div class="about-badge">
+        <strong>Since 2012</strong>
+        <span>Locally Roasted</span>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <p class="eyebrow reveal">Our Story</p>
+      <h2 class="section-title reveal">Grown from soil, brewed with intention</h2>
+      <p class="reveal">
+        GreenLeaf Café began as a single roasting table behind a family nursery.
+        What started as weekend cups for neighbours has grown into a full café —
+        but the table, and the intention behind it, never left. We still choose
+        farmers before flavours, and people before profit.
+      </p>
+
+      <div class="about-points">
+        <div class="about-point reveal">
+          <span class="point-icon">🌾</span>
+          <div>
+            <h3>Our Mission</h3>
+            <p>To serve coffee that respects the land it grows on and the hands that pick it.</p>
+          </div>
+        </div>
+        <div class="about-point reveal">
+          <span class="point-icon">🌍</span>
+          <div>
+            <h3>Sustainable Sourcing</h3>
+            <p>Direct-trade beans from small growers, paid fairly, harvested responsibly.</p>
+          </div>
+        </div>
+        <div class="about-point reveal">
+          <span class="point-icon">📦</span>
+          <div>
+            <h3>Eco-Friendly Packaging</h3>
+            <p>Compostable cups, recycled paper bags, zero single-use plastic.</p>
+          </div>
+        </div>
+        <div class="about-point reveal">
+          <span class="point-icon">☕</span>
+          <div>
+            <h3>Locally Roasted</h3>
+            <p>Small batches, roasted weekly, just streets away from your table.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MENU ================= -->
+<section class="menu" id="menu">
+  <div class="container">
+    <p class="eyebrow reveal center">Featured Menu</p>
+    <h2 class="section-title reveal center">Crafted for every kind of morning</h2>
+
+    <div class="menu-tabs reveal center" id="menuTabs">
+      <button class="menu-tab active" data-filter="coffee">Coffee</button>
+      <button class="menu-tab" data-filter="tea">Tea</button>
+      <button class="menu-tab" data-filter="dessert">Desserts</button>
+      <button class="menu-tab" data-filter="food">Healthy Food</button>
+    </div>
+
+    <div class="menu-grid" id="menuGrid">
+      <!-- Coffee -->
+      <article class="menu-card" data-category="coffee">
+        <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&q=80" alt="Cappuccino"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Cappuccino</h3><span class="price">₹180</span></div>
+          <p>Rich espresso, steamed milk, a crown of velvety foam.</p>
+        </div>
+      </article>
+      <article class="menu-card" data-category="coffee">
+        <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80" alt="Latte"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Latte</h3><span class="price">₹190</span></div>
+          <p>Smooth and milky, with delicate latte-art on top.</p>
+        </div>
+      </article>
+      <article class="menu-card" data-category="coffee">
+        <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=600&q=80" alt="Espresso"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Espresso</h3><span class="price">₹120</span></div>
+          <p>Bold, concentrated, roasted just hours before your visit.</p>
+        </div>
+      </article>
+      <article class="menu-card" data-category="coffee">
+        <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?w=600&q=80" alt="Mocha"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Mocha</h3><span class="price">₹220</span></div>
+          <p>Espresso meets dark chocolate, finished with cream.</p>
+        </div>
+      </article>
+
+      <!-- Tea -->
+      <article class="menu-card" data-category="tea">
+        <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1627435601361-ec25f5b1d0e5?w=600&q=80" alt="Green Tea"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Green Tea</h3><span class="price">₹120</span></div>
+          <p>Delicate, grassy and calming — steeped to order.</p>
+        </div>
+      </article>
+      <article class="menu-card" data-category="tea">
+        <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=600&q=80" alt="Lemon Tea"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Lemon Tea</h3><span class="price">₹130</span></div>
+          <p>Bright citrus and honey, a gentle afternoon lift.</p>
+        </div>
+      </article>
+      <article class="menu-card" data-category="tea">
+        <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1563911302283-d2bc129e7570?w=600&q=80" alt="Herbal Tea"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Herbal Tea</h3><span class="price">₹140</span></div>
+          <p>A rotating blend of chamomile, mint and dried petals.</p>
+        </div>
+      </article>
+
+      <!-- Desserts -->
+      <article class="menu-card" data-category="dessert">
+        <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&q=80" alt="Brownie"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Brownie</h3><span class="price">₹170</span></div>
+          <p>Dense, fudgy, baked fresh every morning in-house.</p>
+        </div>
+      </article>
+      <article class="menu-card" data-category="dessert">
+        <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1567171466295-4afa63d45416?w=600&q=80" alt="Cheesecake"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Cheesecake</h3><span class="price">₹250</span></div>
+          <p>Creamy, light, with a hint of vanilla and citrus zest.</p>
+        </div>
+      </article>
+      <article class="menu-card" data-category="dessert">
+        <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=600&q=80" alt="Muffins"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Muffins</h3><span class="price">₹150</span></div>
+          <p>Blueberry or banana-walnut, soft and gently sweet.</p>
+        </div>
+      </article>
+
+      <!-- Healthy Food -->
+      <article class="menu-card" data-category="food">
+        <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1553909489-cd47e0ef937f?w=600&q=80" alt="Sandwiches"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Sandwiches</h3><span class="price">₹220</span></div>
+          <p>Sourdough, seasonal veggies, herbed cream cheese.</p>
+        </div>
+      </article>
+      <article class="menu-card" data-category="food">
+        <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80" alt="Salads"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Salads</h3><span class="price">₹250</span></div>
+          <p>Crisp greens, roasted nuts, citrus-olive dressing.</p>
+        </div>
+      </article>
+      <article class="menu-card" data-category="food">
+        <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1550507992-eb63ffee0847?w=600&q=80" alt="Wraps"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Wraps</h3><span class="price">₹280</span></div>
+          <p>Whole-grain wrap, grilled veggies, herbed yoghurt.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+<section class="why-us" id="why-us">
+  <div class="container">
+    <p class="eyebrow reveal center">Why Choose Us</p>
+    <h2 class="section-title reveal center">Small café, careful details</h2>
+
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <span class="why-icon">☕</span>
+        <h3>Premium Coffee</h3>
+        <p>Single-origin beans, roasted in small batches for peak flavour.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">🌱</span>
+        <h3>Organic Ingredients</h3>
+        <p>No shortcuts — real, traceable, pesticide-free produce.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">🚀</span>
+        <h3>Fast Service</h3>
+        <p>Order ready in minutes, without rushing the experience.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">😊</span>
+        <h3>Friendly Staff</h3>
+        <p>Baristas who remember your name and your usual order.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <p class="eyebrow reveal center">Gallery</p>
+    <h2 class="section-title reveal center">A peek inside GreenLeaf</h2>
+
+    <div class="gallery-grid">
+      <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=700&q=80" alt="Café interior"></div>
+      <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=700&q=80" alt="Coffee pour"></div>
+      <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=700&q=80" alt="Latte art"></div>
+      <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=700&q=80" alt="Coffee beans"></div>
+      <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?w=700&q=80" alt="Café seating area"></div>
+      <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=700&q=80" alt="Barista at work"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SPECIAL OFFERS ================= -->
+<section class="offers" id="offers">
+  <div class="container">
+    <p class="eyebrow reveal center">Special Offers</p>
+    <h2 class="section-title reveal center">A little extra, just for you</h2>
+
+    <div class="offers-grid">
+      <div class="offer-card reveal">
+        <span class="offer-tag">Everyday</span>
+        <h3>Buy 1 Get 1 Coffee</h3>
+        <p>Bring a friend along — every second coffee is on us, all day Tuesdays.</p>
+      </div>
+      <div class="offer-card reveal">
+        <span class="offer-tag">Weekend</span>
+        <h3>Weekend Discount</h3>
+        <p>20% off your entire order, Saturday and Sunday mornings before 11am.</p>
+      </div>
+      <div class="offer-card reveal">
+        <span class="offer-tag">Student</span>
+        <h3>Student Discount</h3>
+        <p>Show a valid student ID for 15% off, any day, any drink.</p>
+      </div>
+      <div class="offer-card reveal">
+        <span class="offer-tag">Seasonal</span>
+        <h3>Seasonal Drinks</h3>
+        <p>Limited-batch seasonal specials, brewed while the harvest lasts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <p class="eyebrow">Contact Us</p>
+      <h2 class="section-title">Come sit with us a while</h2>
+
+      <ul class="contact-list">
+        <li><span>📍</span><div><strong>Address</strong><p>24, 100 Feet Road, Indiranagar, Bengaluru – 560038, India</p></div></li>
+        <li><span>📞</span><div><strong>Phone</strong><p>+91 98765 43210</p></div></li>
+        <li><span>✉️</span><div><strong>Email</strong><p>contact@greenleafcafe.in</p></div></li>
+        <li><span>🕒</span><div><strong>Opening Hours</strong><p>Mon–Fri: 7:30am – 8pm · Sat–Sun: 8am – 9pm</p></div></li>
+      </ul>
+
+      <div class="map-placeholder">
+        <span>🗺️ Google Map Placeholder</span>
+        <p>24, 100 Feet Road, Indiranagar, Bengaluru</p>
+      </div>
+    </div>
+
+    <form class="contact-form reveal" id="contactForm">
+      <h3>Send us a message</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="What's this about?">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required placeholder="Tell us more..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary ripple full-width">Send Message</button>
+      <p class="form-note" id="formNote"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="brand">
+        <span class="brand-mark">🌿</span>
+        <span class="brand-text">GreenLeaf <em>Café</em></span>
+      </a>
+      <p>Fresh Coffee. Fresh Ideas. A premium, eco-friendly café rooted in honest sourcing and warm mornings.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram">📷</a>
+        <a href="#" aria-label="Facebook">📘</a>
+        <a href="#" aria-label="Twitter">🐦</a>
+        <a href="#" aria-label="WhatsApp">💬</a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h4>Visit</h4>
+      <ul>
+        <li>24, 100 Feet Road, Indiranagar, Bengaluru – 560038</li>
+        <li>+91 98765 43210</li>
+        <li>contact@greenleafcafe.in</li>
+      </ul>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>New drinks and small offers, once a month, no spam.</p>
+      <form id="newsletterForm" class="newsletter-form">
+        <input type="email" placeholder="Your email address" required aria-label="Email for newsletter">
+        <button type="submit" class="btn btn-small btn-primary ripple">Join</button>
+      </form>
+      <p class="form-note" id="newsletterNote"></p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 GreenLeaf Café. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- ================= BACK TO TOP ================= -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
